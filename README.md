@@ -63,14 +63,10 @@ const MyComponent = () => {
 const { language, translations, getText, toggleLanguage } = useContext(LanguageContext);
 
 return (
-
-<div>
-      <h2>{getText('title_home')}</h2>
       <div>
         <p>{getText('welcome')}</p>
         <p>{getText('mainText')}</p>
         <p>{getText('description')}</p>
       </div>
-    </div>
 );
 };
