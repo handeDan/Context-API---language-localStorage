@@ -1,0 +1,36 @@
+{
+  "tr": {
+    "language": "İNGİLİZCE",
+    "modeDark": "KARANLIK MOD",
+    "modeLight": "AYDINLIK MOD",
+    "link_1": "Ana Sayfa",
+    "link_2": "Giriş Yap",
+    "title_home": "Ana Sayfa",
+    "welcome": "Hoşgeldiniz!",
+    "mainText": "Bu çalışma, dil değişimi için Context API örneğidir.",
+    "description": "Local storage'deki değişiklikleri görebilmek için İngilizce/Turkish butonuna tıklayabilirsiniz.",
+    "title_login": "Giriş Yap",
+    "label_1": "Kullanıcı adı: ",
+    "label_1_ph": "lütfen kullanıcı adınızı girin.",
+    "label_2": "Şifre: ",
+    "label_2_ph": "lütfen şifrenizi girin.",
+    "login_button": "Gönder"
+  },
+  "en": {
+    "language": "TURKISH",
+    "modeDark": "DARK MODE",
+    "modeLight": "LIGHT MODE",
+    "link_1": "Home Page",
+    "link_2": "Login Page",
+    "title_home": "Home Page",
+    "welcome": "Welcome!",
+    "mainText": "This is a sample for Context API for app theme.",
+    "description": "You can click İngilizce/Turkish button to use Context API and check the local storage changes.",
+    "title_login": "Login Page",
+    "label_1": "Username: ",
+    "label_1_ph": "please type your username.",
+    "label_2": "Password: ",
+    "label_2_ph": "please type your password.",
+    "login_button": "Submit"
+  }
+}
