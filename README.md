@@ -28,15 +28,22 @@ import React, { createContext, useState } from 'react';
 export const LanguageContext= createContext();
 
 export const LanguageProvider= ({ children }) => {
-_//localStorage kontrolü:_
 const savedLanguage = localStorage.getItem('language');
-// Varsayılan dil:
+
 const [language, setLanguage] = useState(
 savedLanguage ? savedLanguage : 'tr'
 );
-_// Varsayılan çeviri:_
-_//default olarak {} ama içini useEffect'le dolduruyoruz ve getItem fonksiyonuyla gelen veriden istediğimiz bilgiyi çekeceğiz:_
+
 const [translations, setTranslations] = useState(null);
+
+const getText = (shortcut) => {
+if (!translations || !translations[language]) return '';
+return translations[language]?.[shortcut] || shortcut;
+};
+
+const toggleLanguage = () => {
+setLanguage((prevLanguage) => (prevLanguage === 'tr' ? 'en' : 'tr'));
+};
 
 return (
 <LanguageContext.Provider value={{ language, translations, getText, toggleLanguage }}>
@@ -53,13 +60,17 @@ return (
 import React, { useContext } from 'react';
 
 const MyComponent = () => {
-// 1. useContext kullanarak context değerini alıyoruz
 const { language, translations, getText, toggleLanguage } = useContext(LanguageContext);
 
 return (
+
 <div>
-<p>{value}</p>
-<button onClick={() => setValue('Yeni Değer')}>Değeri Güncelle</button>
-</div>
+      <h2 className="title">{getText('title_home')}</h2>
+      <div className="home">
+        <p>{getText('welcome')}</p>
+        <p>{getText('mainText')}</p>
+        <p>{getText('description')}</p>
+      </div>
+    </div>
 );
 };
